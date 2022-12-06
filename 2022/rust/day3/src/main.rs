@@ -55,6 +55,8 @@ fn part2() -> Result<u32, Box<dyn std::error::Error>> {
     let mut lines = reader.lines();
 
     while let (Some(l1), Some(l2), Some(l3)) = (lines.next(), lines.next(), lines.next()) {
+        // Note to self, lines.next() returns an Option<Result<string>>.  Using Some above unwraps the Option, but we still need to unwrap the result to get to the
+        // string.  If any of these fails the program will panic.
         let mut bag1 = l1.unwrap().into_bytes();
         let mut bag2 = l2.unwrap().into_bytes();
         let mut bag3 = l3.unwrap().into_bytes();
