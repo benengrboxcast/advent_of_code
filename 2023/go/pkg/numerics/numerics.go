@@ -12,6 +12,10 @@ func GetNumeric(line string, startIndex int) (int, int) {
 		i++
 	}
 
+	neg := false
+	if i > startIndex && line[i-1] == '-' {
+		neg = true
+	}
 	for i < len(line) {
 		if line[i] >= 0x30 && line[i] <= 0x39 {
 			rval = rval*10 + int(line[i]-0x30)
@@ -20,6 +24,9 @@ func GetNumeric(line string, startIndex int) (int, int) {
 			break
 		}
 		i++
+	}
+	if neg {
+		rval = -rval
 	}
 
 	if found {

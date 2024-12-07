@@ -1,0 +1,4 @@
+for i in range {5..25}
+do
+    touch day$i/day$i.py
+done

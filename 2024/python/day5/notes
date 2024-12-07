@@ -1,0 +1,19 @@
+From Example
+
+Sequence is 75,97,47,61,53
+
+For each index x, go through all the other elements at index y.
+
+If y < x and there is a rule that the element at y must come after x move the element at index y to x + 1.
+If y > x and there is a rule that the element at y must come before x move the element to index x (and the rest of the list back 1)
+
+Iteration | Change | Result
+0         |        | 75,97,47,61,53
+1         | 97 must come before 75 | 97,75,47,61,53
+
+
+0 | | 97,13,75,29,47
+1 | 97 is ok, no changes | 97,13,75,29,47
+2 | 75 comes before 13   | 97,75,13,29,47
+3 | now start with comparing 75 and 29 and keep going | 97,75,13,29,47
+4 |
