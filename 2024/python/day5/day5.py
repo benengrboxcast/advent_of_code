@@ -1,4 +1,4 @@
-from sortedcontainers import SortedDict, SortedList
+from sortedcontainers import SortedList
 from timeit import default_timer as timer
 
 def parse_input(filename):
