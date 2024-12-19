@@ -1,2 +1,4 @@
 sortedcontainers
 memory_profiler
+pygame
+numpy
